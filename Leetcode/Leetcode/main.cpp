@@ -459,21 +459,236 @@ public:
 //}
 
 
-#include <iostream>
-using namespace std;
-int main(){
-    int pre_b{0};
-    int sum{0};
-    while(cin >> pre_b)
-    {
-        
-        sum += pre_b;
-        if(cin.get()=='\n')
-        {
-            cout << sum<< endl;
-            sum = 0;
-        }
-    }
-    return 0;
-}
+//#include <iostream>
+//using namespace std;
+//int main(){
+//    int pre_b{0};
+//    int sum{0};
+//    while(cin >> pre_b)
+//    {
+//
+//        sum += pre_b;
+//        if(cin.get()=='\n')
+//        {
+//            cout << sum<< endl;
+//            sum = 0;
+//        }
+//    }
+//    return 0;
+//}
 
+//#include <bits/stdc++.h>
+//
+////using namespace std;
+//int main(){
+//    int n{0};
+//    string str;
+//    vector<string> strs;
+//    cin >> n;
+//    strs.reserve(n);
+//    for (int i = 0; i <n; i++)
+//    {
+//        cin >>str;
+//        strs.push_back(str);
+//    }
+//    sort(strs.begin(), strs.end());
+//
+//    for (auto x : strs)
+//        cout << x << " ";
+//
+//    return 0;
+//}
+
+//
+//#include <bits/stdc++.h>
+//using namespace std;
+//const int max_n = 100;
+//int main(){
+//    string str;
+//    vector<string> strs;
+//    strs.reserve(max_n);
+//    while(cin>>str)
+//    {
+//        strs.push_back(str);
+//        if(cin.get() == '\n')
+//        {
+//            sort(strs.begin(), strs.end());
+//            for (auto x : strs)
+//                cout << x << " ";
+//            cout<<endl;
+//            strs.clear();
+//        }
+//    }
+//    return 0;
+//}
+
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//const int max_n = 100;
+
+//
+//template <class myType>
+//void sort_and_output(vector<myType>& vec)
+//{
+//    sort(vec.begin(), vec.end());
+//    for(auto it = vec.begin(); it!=vec.end();++it) {
+//        if(std::next(it) == vec.end())
+//            cout<<*it<<endl;
+//        else
+//            cout << *it << ",";
+//    }
+//}
+//
+//template <class myType>
+//vector<myType> splitSentence(string& s, const string& delimiter)
+//{
+//    vector<myType> vec;
+//    size_t pos=0;
+//    myType token;
+//    while ((pos = s.find(delimiter)) != std::string::npos) {
+//        token = s.substr(0, pos);
+//        vec.push_back(token);
+//        s.erase(0, pos + delimiter.length());
+//    }
+//    vec.push_back(s);
+//
+//    return vec;
+//}
+//
+//int main(){
+//    vector<string> strs;
+//    string s;
+//    string delimiter(",");
+//    size_t pos;
+//    while(getline(cin, s))
+//    {
+//        strs = splitSentence<string>(s,",");
+//        sort_and_output<string>(strs);
+//
+//    }
+//    return 0;
+//}
+
+
+//        对输入的字符串进行排序后输出
+//输入描述:
+//
+//多个测试用例，每个测试用例一行。
+//每行通过,隔开，有n个字符，n＜100
+//
+//输出描述:
+//
+//对于每组用例输出一行排序后的字符串，用','隔开，无结尾空格
+//a,c,bb
+//        f,dddd
+//nowcoder
+//
+//        a,bb,c
+//dddd,f
+//        nowcoder
+
+
+//using namespace std;
+//
+//int main(){
+//    string s;
+//    while(getline(cin,s)){
+//        vector<string> vec;
+//        stringstream ss;
+//        ss<<s;
+//        string temp;
+//        while(getline(ss,temp,',')){
+//            vec.push_back(temp);
+//        }
+//        sort(vec.begin(),vec.end());
+//        for(int i=0;i<vec.size();i++){
+//            if(i!=vec.size()-1)
+//                cout<<vec[i]<<",";
+//            else
+//                cout<<vec[i]<<endl;
+//        }
+//    }
+//    return 0;
+//}
+
+
+// 写出一个程序，接受一个由字母和数字组成的字符串，和一个字符，然后输出输入字符串中含有该字符的个数。不区分大小写。
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//std::string lower_string(const std::string& str)
+//{
+//    string lower;
+//    transform(str.begin(), str.end(), std::back_inserter(lower), ::tolower);
+//    return lower;
+//}
+//
+//int main()
+//{
+//    string strs;
+//    string str;
+//    cin>>strs;
+//    cin>>str;
+//    strs = lower_string(strs);
+//    str = lower_string(str);
+//    size_t pos =-1;
+//    int count = 0;
+//    while(1)
+//    {
+//        pos = strs.find(str, pos+1);
+//        if(pos != std::string::npos)
+//            ++count;
+//        else break;
+//    }
+//    cout<<count<<endl;
+//}
+
+//题目描述
+//        计算字符串最后一个单词的长度，单词以空格隔开。
+//输入描述:
+//
+//一行字符串，非空，长度小于5000。
+//
+//输出描述:
+//
+//整数N，最后一个单词的长度。
+//
+//示例1
+//        输入
+//        hello world
+//
+//        输出
+//5
+
+
+
+//#include <bits/stdc++.h>
+//using namespace std;
+
+//int main(){
+//    string s;
+//    getline(cin, s);
+//    size_t pos = 0;
+//    pos = s.find_last_of(" ");
+//    cout<< s.substr(pos+1).length()<<endl;
+//    return 0;
+//}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+const int max_n = 200;
+int main()
+{
+    char ch;
+    size_t count=0;
+    while(cin>>ch)
+    {
+        if(cin.get() == '\n') break;
+        if(ch>=0 && ch<=127)
+            count++;
+    }
+
+    cout << count <<endl;
+}
