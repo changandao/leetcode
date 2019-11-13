@@ -41,3 +41,9 @@ int majorityElement(vector<int>& nums) {
 ## tree
 ## string
 ## math
+
+
+# Fast ai
+#### Make functions if you use something often. Jeremy made function called stats(x) which returned the mean and the standard deviation of the input.
+### ***Talking and reading is cheap, show me the code.***
+#### One thing I noticed right away was that Jeremy didn’t just read things from somewhere but he tested those by himself.
