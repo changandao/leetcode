@@ -459,21 +459,34 @@ public:
 //}
 
 
+//#include <iostream>
+//using namespace std;
+//int main(){
+//    int pre_b{0};
+//    int sum{0};
+//    while(cin >> pre_b)
+//    {
+//
+//        sum += pre_b;
+//        if(cin.get()=='\n')
+//        {
+//            cout << sum<< endl;
+//            sum = 0;
+//        }
+//    }
+//    return 0;
+//}
+
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int pre_b{0};
-    int sum{0};
-    while(cin >> pre_b)
+    string str;
+    
+    while(cin >> str)
     {
-        
-        sum += pre_b;
-        if(cin.get()=='\n')
-        {
-            cout << sum<< endl;
-            sum = 0;
-        }
+        for
     }
+    cout<<int(ch);
     return 0;
 }
-
