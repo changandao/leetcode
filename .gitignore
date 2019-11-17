@@ -1,2 +1,4 @@
 # ignore cuda 
 cuda/
+# ignore vs file
+.vs/

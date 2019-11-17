@@ -149,7 +149,8 @@ int main()
     int length = getCount(head);
     cout<<"The length of the list is: ";
     cout<<length<<endl;
-      
+	int end;
+	cin >> end;
     return 0;
 }
 
