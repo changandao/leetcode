@@ -477,16 +477,359 @@ public:
 //    return 0;
 //}
 
+//#include <bits/stdc++.h>
+//
+////using namespace std;
+//int main(){
+//    int n{0};
+//    string str;
+//    vector<string> strs;
+//    cin >> n;
+//    strs.reserve(n);
+//    for (int i = 0; i <n; i++)
+//    {
+//        cin >>str;
+//        strs.push_back(str);
+//    }
+//    sort(strs.begin(), strs.end());
+//
+//    for (auto x : strs)
+//        cout << x << " ";
+//
+//    return 0;
+//}
+
+//
+//#include <bits/stdc++.h>
+//using namespace std;
+//const int max_n = 100;
+//int main(){
+//    string str;
+//    vector<string> strs;
+//    strs.reserve(max_n);
+//    while(cin>>str)
+//    {
+//        strs.push_back(str);
+//        if(cin.get() == '\n')
+//        {
+//            sort(strs.begin(), strs.end());
+//            for (auto x : strs)
+//                cout << x << " ";
+//            cout<<endl;
+//            strs.clear();
+//        }
+//    }
+//    return 0;
+//}
+
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//const int max_n = 100;
+
+//
+//template <class myType>
+//void sort_and_output(vector<myType>& vec)
+//{
+//    sort(vec.begin(), vec.end());
+//    for(auto it = vec.begin(); it!=vec.end();++it) {
+//        if(std::next(it) == vec.end())
+//            cout<<*it<<endl;
+//        else
+//            cout << *it << ",";
+//    }
+//}
+//
+//template <class myType>
+//vector<myType> splitSentence(string& s, const string& delimiter)
+//{
+//    vector<myType> vec;
+//    size_t pos=0;
+//    myType token;
+//    while ((pos = s.find(delimiter)) != std::string::npos) {
+//        token = s.substr(0, pos);
+//        vec.push_back(token);
+//        s.erase(0, pos + delimiter.length());
+//    }
+//    vec.push_back(s);
+//
+//    return vec;
+//}
+//
+//int main(){
+//    vector<string> strs;
+//    string s;
+//    string delimiter(",");
+//    size_t pos;
+//    while(getline(cin, s))
+//    {
+//        strs = splitSentence<string>(s,",");
+//        sort_and_output<string>(strs);
+//
+//    }
+//    return 0;
+//}
+
+
+//        对输入的字符串进行排序后输出
+//输入描述:
+//
+//多个测试用例，每个测试用例一行。
+//每行通过,隔开，有n个字符，n＜100
+//
+//输出描述:
+//
+//对于每组用例输出一行排序后的字符串，用','隔开，无结尾空格
+//a,c,bb
+//        f,dddd
+//nowcoder
+//
+//        a,bb,c
+//dddd,f
+//        nowcoder
+
+
+//using namespace std;
+//
+//int main(){
+//    string s;
+//    while(getline(cin,s)){
+//        vector<string> vec;
+//        stringstream ss;
+//        ss<<s;
+//        string temp;
+//        while(getline(ss,temp,',')){
+//            vec.push_back(temp);
+//        }
+//        sort(vec.begin(),vec.end());
+//        for(int i=0;i<vec.size();i++){
+//            if(i!=vec.size()-1)
+//                cout<<vec[i]<<",";
+//            else
+//                cout<<vec[i]<<endl;
+//        }
+//    }
+//    return 0;
+//}
+
+
+// 写出一个程序，接受一个由字母和数字组成的字符串，和一个字符，然后输出输入字符串中含有该字符的个数。不区分大小写。
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//std::string lower_string(const std::string& str)
+//{
+//    string lower;
+//    transform(str.begin(), str.end(), std::back_inserter(lower), ::tolower);
+//    return lower;
+//}
+//
+//int main()
+//{
+//    string strs;
+//    string str;
+//    cin>>strs;
+//    cin>>str;
+//    strs = lower_string(strs);
+//    str = lower_string(str);
+//    size_t pos =-1;
+//    int count = 0;
+//    while(1)
+//    {
+//        pos = strs.find(str, pos+1);
+//        if(pos != std::string::npos)
+//            ++count;
+//        else break;
+//    }
+//    cout<<count<<endl;
+//}
+
+//题目描述
+//        计算字符串最后一个单词的长度，单词以空格隔开。
+//输入描述:
+//
+//一行字符串，非空，长度小于5000。
+//
+//输出描述:
+//
+//整数N，最后一个单词的长度。
+//
+//示例1
+//        输入
+//        hello world
+//
+//        输出
+//5
+
+
+
+//#include <bits/stdc++.h>
+//using namespace std;
+
+//int main(){
+//    string s;
+//    getline(cin, s);
+//    size_t pos = 0;
+//    pos = s.find_last_of(" ");
+//    cout<< s.substr(pos+1).length()<<endl;
+//    return 0;
+//}
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//const int max_n = 200;
+//int main()
+//{
+//    char ch;
+//    size_t count=0;
+//    while(cin>>ch)
+//    {
+//        if(cin.get() == '\n') break;
+//        if(ch>=0 && ch<=127)
+//            count++;
+//    }
+//
+//    cout << count <<endl;
+//}
+
+//#include <bits/stdc++.h>
+//#include <iostream>
+//#include <cstdio>
+//#include <string>
+//using namespace std;
+//
+//int main()
+//{
+//    string strs{" "};
+//    string str;
+//    while(cin>>str)
+//    {
+//        strs.append(str);
+//        if(cin.get()=='\n')
+//        {cin>>str;
+//            break;}
+//
+//    }
+//    size_t pos =-1;
+//    size_t count = 0;
+//    while ((pos = strs.find(str, pos+1)) != string::npos) {
+//        count ++;}
+//    cout<<count<<endl;
+//
+//}
+
+
+
+
+
+//#include <iostream>
+//#include <cstdio>
+//#include <string>
+//#include <cmath>
+//using namespace std;
+//
+//template <class myType>
+//vector<myType> splitSentence(string& s, const string& delimiter)
+//{
+//    vector<myType> vec;
+//    size_t pos=0;
+//    myType token;
+//    while ((pos = s.find(delimiter)) != std::string::npos) {
+//        token = s.substr(0, pos);
+//        vec.push_back(token);
+//        s.erase(0, pos + delimiter.length());
+//    }
+//    vec.push_back(s);
+//
+//    return vec;
+//}
+//
+//
+//
+//
+//int main()
+//{
+//    string strs;
+//    getline(cin, strs);
+//    vector<string> splitStrs;
+//    splitStrs = splitSentence<string>(strs, "|");
+//
+//    float x, y, t1, t2, sum1, sum2;// x 通话费率，y 流量费率， t1 通话时间（s） t2 流量使用量（M）
+//    t1 = stof(splitStrs[1]);
+//    t2 = stof(splitStrs[3]);
+//    x = stof(splitStrs[2]);
+//    y = stof(splitStrs[4]);
+//
+//    // 通话费用计算
+//    t1 = ceil(t1/60.f);
+//    if(t1<=1)
+//        sum1 = 0;
+//    else if(t1>1 && t1<=5)
+//        sum1 = (t1-1.) * x * 1.5;
+//    else if(t1>5 && t1<=10)
+//        sum1 = (t1-5.)* x + 6.f * x;
+//    else if(t1>10 && t1<=20)
+//        sum1 = (t1-10.)* x * 0.5 +  11.f * x;
+//    else
+//        sum1 = (t1-20.) * x * 0.2 + 16.f * x;
+//    int sum11 = int(sum1/10);
+//
+//    //流量费用计算
+//    t2 = ceil(t2/1024.);
+//    if(t2<=100)
+//        sum2 = y*t2;
+//    else if(t2>100 && t2<=125)
+//        sum2 = y * 100.;
+//    else if(t2>125 && t2<=225)
+//        sum2 = y*(t2-125.) + y * 100.;
+//    else if(t2>225 && t2<=325)
+//        sum2 = y * 200;
+//    else if(t2>325 && t2<=625)
+//        sum2 = y *(t2-325.) + y * 100.;
+//    else
+//        sum2 = y * 600.;
+//    int sum22 = sum2 *1024/100;
+//    int sum = sum11 + sum22;
+//    cout<<sum<<endl;
+//
+//}
+
+
 #include <iostream>
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <vector>
+
 using namespace std;
+
 int main(){
-    string str;
-    
-    while(cin >> str)
-    {
-        for
+    //freopen("1.in","r",stdin);
+    vector<vector<int>> mat;
+    int n = 0;
+    cin >> n;
+    for(int k =0; k<n; k++){
+        for (int i = 0; i < n; i++)
+            mat[i].reserve(n);
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                int x; scanf("%d",&x);
+                mat[j][i] = x;
+            }
+        }
+        
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 2; j++){
+                if (mat[i][j] == mat[i][j+1])
+                {   if(mat[i][j]==1)
+                        cout << 1 <<endl;
+                    else if(mat[i][j]==2)
+                        cout <<2 <<endl;
+                        }
+            }
+        }
     }
-    cout<<int(ch);
+    
     return 0;
 }
+
+
