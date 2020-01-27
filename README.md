@@ -38,10 +38,13 @@ int majorityElement(vector<int>& nums) {
 ***Majority Voting Algorithm***
 [Moore voting](https://gregable.com/2013/10/majority-vote-algorithm-find-majority.html)
 ## linkedlist
+#### 206 Reverse Linked List
 ## tree
+#### 105. Construct Binary Tree from Preorder and Inorder Traversal
 ## string
 ## math
-
+## search
+#### 240. Search a 2D Matrix II
 
 # Fast ai
 #### Make functions if you use something often. Jeremy made function called stats(x) which returned the mean and the standard deviation of the input.
